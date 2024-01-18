@@ -124,11 +124,12 @@ I did most of the testing in POSTMAN, I have exported teh postman collection jso
 
 # Improvements
 
-1.  Would have liked to dockerise the application as well so it would have an easier setup for the user.
-2.  Would have liked to add automated tests for better test coverage i.e. unit tests and e2e testing.
-3.  Better error handling, I have written a global custom exception handler, however I think this can be improved as there is currently a bug for the internal error messages, I assuming that all errors will be JSON objects which this is not the case. For exceptions I have 2 different messages, one for internal use and the other is for the UI.  The internal one can be used to be fed into something like an ELK stack for error / log traceabaility.  All exceptions will also have a code generated for it so if it is fed into a log tracker then it should be easy to search for.
+1. Would have liked to dockerise the application as well so it would have an easier setup for the user.
+2. Would have liked to add automated tests for better test coverage i.e. unit tests and e2e testing.
+3. Better error handling, I have written a global custom exception handler, however I think this can be improved as there is currently a bug for the internal error messages, I assuming that all errors will be JSON objects which this is not the case. For exceptions I have 2 different messages, one for internal use and the other is for the UI.  The internal one can be used to be fed into something like an ELK stack for error / log traceabaility.  All exceptions will also have a code generated for it so if it is fed into a log tracker then it should be easy to search for.
 4. Added roles based authorisation such as admin and normal user.  Admins will be able to search through all users and find out who their referrers are etc.  Where as normal users can only see details of their own account. https://docs.nestjs.com/security/authorization
-5.  GetProfile wasn't really done efficiently, The drizzle ORM documentation around relations is not fully documented or at least not documented properly. The belongsTo gave me the wrong result which is the reason I did it the way I have now.
+5. GetProfile wasn't really done efficiently, The drizzle ORM documentation around relations is not fully documented or at least not documented properly. The belongsTo gave me the wrong result which is the reason I did it the way I have now.
 6. Load testing since one of the requirements was high traffic and concurrency.
 7. Rate limiting, to stop DDOS attacks.
+8. All entities should have a createdDate, updatedDate and updatedBy so we can track if anything goes wrong.
 
