@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+  animocadb:
+    image: postgres:14.2
+    restart: always
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=animoca
+    networks:
+      - animoca-network
+    ports:
+      - '5432:5432'
+    volumes:
+      - animocadb:/var/lib/postgresql/data
+volumes:
+  animocadb:
+    driver: local
+networks:
+  animoca-network:

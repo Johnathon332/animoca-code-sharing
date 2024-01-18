@@ -1,0 +1,3 @@
+const PG_CONNECTION: string = 'POSTGRES_CONNECTION';
+
+export { PG_CONNECTION }

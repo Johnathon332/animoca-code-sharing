@@ -1,0 +1,1 @@
+type UserPayload = { user: { id: number, email: string }};
