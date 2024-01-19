@@ -1,8 +1,27 @@
 # Installation
+npm:
+```
+1. Run npm install to install all dependencies
+2. Run docker compose up -d in the terminal within the root of the folder, this will start up the database
+3. Run npm drizzle-kit generate:pg, this will setup the database.  Once you run the application the database schema should be setup in the db (not the best way to do this, we probably want full control on what databases changes there are, we want to be able to check the sql before deploying to db).
+4. Run npm start in the terminal to start the application.
+```
+
+yarn:
+```
+1. Run yarn to install all dependencies
+2. Run docker compose up -d in the terminal within the root of the folder, this will start up the database
+3. Run yarn drizzle-kit generate:pg, this will setup the database.  Once you run the application the database schema should be setup in the db (not the best way to do this, we probably want full control on what databases changes there are, we want to be able to check the sql before deploying to db).
+4. Run yarn start in the terminal to start the application.
+```
+
+pnpm:
+```
 1. Run pnpm install to install all dependencies
 2. Run docker compose up -d in the terminal within the root of the folder, this will start up the database
 3. Run pnpm drizzle-kit generate:pg, this will setup the database.  Once you run the application the database schema should be setup in the db (not the best way to do this, we probably want full control on what databases changes there are, we want to be able to check the sql before deploying to db).
-3. Run pnpm start in the terminal to start the application.
+4. Run pnpm start in the terminal to start the application.
+```
 
 # Endpoints
 NOTE: If I had more time I would have produced a openAPI doc for easier testing.
